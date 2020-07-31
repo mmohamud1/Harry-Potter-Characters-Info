@@ -1,24 +1,31 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, { useState, useEffect } from 'react';
+import Header from './Header';
 
-function App() {
+import CharacterGrid from './CharacterGrid'
+import './App.css';
+import axios from 'axios';
+
+const App = () => {
+  const [characters, setCharacters] = useState([]);
+  const [isLoading, setIsLoading] = useState(true);
+
+
+  // fetch http request as soon a the app loads
+  useEffect(() => {
+    const fetchItems = async () => {
+      const res = await axios.get(`https://hp-api.herokuapp.com/api/characters`);
+      //console.log(res.data);
+      setCharacters(res.data);
+      setIsLoading(false);
+    }
+    fetchItems();
+  }, []) 
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="container">
+      <Header />
+
+      <CharacterGrid isLoading={isLoading} characters={characters}/>
     </div>
   );
 }

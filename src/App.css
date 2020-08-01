@@ -44,9 +44,9 @@ header {
 }
 
 header img {
-  width: 450px;
-  margin-top: 20px;
-  margin-bottom: 20px;
+  width: 420px;
+  margin-top: 90px;
+  margin-bottom: 90px;
 }
 
 .center {
@@ -117,7 +117,7 @@ input[type='text'] {
 }
 
 .card-back {
-  background-color: #333;
+  background-image: linear-gradient(to right, #243949 0%, #517fa4 100%);
   color: white;
   padding: 20px;
   transform: rotateY(180deg);

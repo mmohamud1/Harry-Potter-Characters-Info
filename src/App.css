@@ -117,7 +117,7 @@ input[type='text'] {
 }
 
 .card-back {
-  background-image: linear-gradient(to top, #5f72bd 0%, #9b23ea 100%);
+  background-image: linear-gradient(to right, #43e97b 0%, #38f9d7 100%);
   color: white;
   padding: 20px;
   transform: rotateY(180deg);

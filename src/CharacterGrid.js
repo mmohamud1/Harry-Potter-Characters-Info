@@ -7,7 +7,7 @@ const CharacterGrid = ({isLoading, characters}) => {
         {characters.map(character => (
             <CharacterItem key={character.yearOfBirth + character.actor} character={character}></CharacterItem>   
     ))}
-    </section>)
-}
+    </section>);
+};
 
 export default CharacterGrid

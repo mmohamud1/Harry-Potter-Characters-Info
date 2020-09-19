@@ -10,4 +10,4 @@ const CharacterGrid = ({isLoading, characters}) => {
     </section>);
 };
 
-export default CharacterGrid
+export default CharacterGrid;

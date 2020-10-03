@@ -11,7 +11,6 @@ const CharacterItem = ({ character }) => {
                 <div className="card-back">
                     <h1>{character.name}</h1>
                     <ul>
-                        
                         <li>
                             <strong>Actor:</strong> {character.actor}
                         </li>
